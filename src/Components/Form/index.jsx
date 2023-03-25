@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { DescriptionFieldset, DivStyledFormContainer, FormStyled, ValueFieldset } from "./style"
 
 export const NuForm = ({ addToList }) => {
   const [formData, setFormData] = useState({
@@ -21,8 +22,8 @@ export const NuForm = ({ addToList }) => {
     })
   }
   return (
-    <form onSubmit={listSubmit} noValidate>
-      <fieldset>
+    <FormStyled onSubmit={listSubmit} noValidate>
+      <DescriptionFieldset>
         <label htmlFor="FormInputDescription">Descrição</label>
         <input
           type="text"
@@ -31,20 +32,20 @@ export const NuForm = ({ addToList }) => {
           value={formData.title}
           onChange={(event) => setFormData({ ...formData, title: event.target.value })}
         />
-        {/* {formData.title} */}
         <small>Ex: Compra de roupas</small>
-      </fieldset>
-      <div>
-        <fieldset>
-          <label htmlFor="">Valor</label>
+      </DescriptionFieldset>
+      <DivStyledFormContainer>
+        <ValueFieldset>
+          <label htmlFor="FormValue">Valor(R$)</label>
           <input
             type="number"
             placeholder="1"
             value={formData.quant}
+            id="FormValue"
             onChange={(event) => setFormData({ ...formData, quant: event.target.value })}
           />
           {/* {formData.quant} */}
-        </fieldset>
+        </ValueFieldset>
         <fieldset>
           <label htmlFor="">Tipo do Valor</label>
           <select
@@ -55,8 +56,8 @@ export const NuForm = ({ addToList }) => {
             <option value="despesa">Despesa</option>
           </select>
         </fieldset>
-      </div>
+      </DivStyledFormContainer>
       <button type="submit">Inserir valor</button>
-    </form>
+    </FormStyled>
   )
 }
