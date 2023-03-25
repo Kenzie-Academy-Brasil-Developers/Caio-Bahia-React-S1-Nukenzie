@@ -4,6 +4,7 @@ import { Header } from "../../Components/Header"
 import { Nulist } from "../../Components/List"
 import { TotalMoney } from "../../Components/TotalMoney"
 import { v4 as uuidv4 } from "uuid"
+import { FilterButtons } from "../../Components/Filter Buttons"
 
 export const Dashboard = () => {
   const [NukenzieList, setNukenzieList] = useState([])
@@ -37,6 +38,7 @@ export const Dashboard = () => {
         </section>
         {/* Render List + Filter Buttons */}
         <section>
+          <FilterButtons setFilter={setFilter} />
           <Nulist filteredList={filteredList} removeFromList={removeFromList} />
         </section>
       </main>

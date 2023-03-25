@@ -1,10 +1,12 @@
 import React from "react"
+import { HeaderStyled } from "./style"
 
 export const Header = () => {
   return (
-    <header>
-      <img alt="Logo" />
-      <h2>Header Está aqui!</h2>
-    </header>
+    <HeaderStyled>
+      <div>
+        <img src="/src/assets/Logos/Nu Kenzie.png" alt="" />
+      </div>
+    </HeaderStyled>
   )
 }
