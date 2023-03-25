@@ -13,6 +13,9 @@ export const Dashboard = () => {
     return filter === "" ? true : list.category === filter
   })
   const addToList = (list) => {
+    if (list.category === "despesa") {
+      list.quant = -list.quant
+    }
     const newNuList = { ...list, id: uuidv4() }
     setNukenzieList([...NukenzieList, newNuList])
   }
@@ -30,7 +33,7 @@ export const Dashboard = () => {
         {/* Form + Total Money */}
         <section>
           <NuForm addToList={addToList} />
-          <TotalMoney />
+          <TotalMoney NukenzieList={NukenzieList} />
         </section>
         {/* Render List + Filter Buttons */}
         <section>
