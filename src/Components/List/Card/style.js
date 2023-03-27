@@ -8,11 +8,15 @@ export const CardIncome = styled.li`
   background: #f8f9fa;
   border-radius: 4px;
   border-left: 4px solid #03b898;
-  padding-left: 14px;
-  padding-top: 14px;
+  padding: 14px;
   padding-bottom: 19px;
   gap: 10px;
   justify-content: space-between;
+  @media (min-width: 770px) {
+    flex-direction: row;
+    height: 87px;
+    padding: 10px;
+  }
 `
 export const CardOutcome = styled.li`
   display: flex;
@@ -22,10 +26,19 @@ export const CardOutcome = styled.li`
   background: #f8f9fa;
   border-radius: 4px;
   border-left: 4px solid red;
-  padding-left: 14px;
-  padding-top: 14px;
+  padding: 14px;
   gap: 10px;
   justify-content: space-between;
+  @media (min-width: 500px) {
+    flex-direction: row;
+    height: 87px;
+    padding: 10px;
+  }
+  @media (min-width: 770px) {
+    flex-direction: row;
+    height: 87px;
+    padding: 10px;
+  }
 `
 export const CardTextContainerStyledDiv = styled.div`
   display: flex;

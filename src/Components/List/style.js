@@ -11,9 +11,17 @@ export const ListContainerStyledDiv = styled.div`
     line-height: 30px;
     color: #212529;
   }
+  @media (min-width: 770px) {
+    width: 90%;
+  }
 `
 export const UlStyledCardContainer = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media (min-width: 770px) {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
 `

@@ -3,9 +3,10 @@ import styled from "styled-components"
 export const FilterButtonsContainer = styled.div`
   gap: 16px;
   width: 100%;
+  max-width: 355px;
   display: flex;
-  margin: 16px 36px;
   align-items: center;
+  justify-content: center;
   button {
     display: flex;
     flex-direction: row;
@@ -24,5 +25,7 @@ export const FilterButtonsContainer = styled.div`
     font-weight: 500;
     font-size: 14px;
     color: #ffffff;
+  }
+  @media (min-width: 770px) {
   }
 `
