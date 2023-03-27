@@ -4,7 +4,8 @@ export const FilterButtonsContainer = styled.div`
   gap: 16px;
   width: 100%;
   display: flex;
-  margin: 16px 0px;
+  margin: 16px 36px;
+  align-items: center;
   button {
     display: flex;
     flex-direction: row;

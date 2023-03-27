@@ -21,5 +21,6 @@ export const HeaderStyled = styled.header`
   }
   img {
     height: 24px;
+    margin-left: 20px;
   }
 `
