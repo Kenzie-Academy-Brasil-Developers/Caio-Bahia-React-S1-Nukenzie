@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const ListContainerStyledDiv = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0px 36px;
+  /* margin: 0px 36px; */
   gap: 17px;
   h2 {
     font-weight: 700;
@@ -13,6 +13,7 @@ export const ListContainerStyledDiv = styled.div`
   }
   @media (min-width: 770px) {
     width: 90%;
+    margin: 0px;
   }
 `
 export const UlStyledCardContainer = styled.ul`

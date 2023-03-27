@@ -18,6 +18,7 @@ export const HeaderStyled = styled.header`
     margin: 0px 20px;
     display: flex;
     align-items: center;
+    max-width: 1024px;
   }
   img {
     height: 24px;

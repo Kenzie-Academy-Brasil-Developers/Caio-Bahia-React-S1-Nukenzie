@@ -6,7 +6,7 @@ export const FilterButtonsContainer = styled.div`
   max-width: 355px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   button {
     display: flex;
     flex-direction: row;
@@ -27,5 +27,6 @@ export const FilterButtonsContainer = styled.div`
     color: #ffffff;
   }
   @media (min-width: 770px) {
+    justify-content: flex-start;
   }
 `

@@ -29,6 +29,7 @@ export const CardOutcome = styled.li`
   padding: 14px;
   gap: 10px;
   justify-content: space-between;
+
   @media (min-width: 500px) {
     flex-direction: row;
     height: 87px;
