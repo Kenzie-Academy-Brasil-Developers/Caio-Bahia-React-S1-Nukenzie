@@ -1,5 +1,12 @@
 import React, { useState } from "react"
-import { DescriptionFieldset, DivStyledFormContainer, FormStyled, ValueFieldset } from "./style"
+import {
+  DescriptionFieldset,
+  DivButtonSubmit,
+  DivStyledFormContainer,
+  FormStyled,
+  SelectFieldset,
+  ValueFieldset
+} from "./style"
 
 export const NuForm = ({ addToList }) => {
   const [formData, setFormData] = useState({
@@ -46,8 +53,8 @@ export const NuForm = ({ addToList }) => {
           />
           {/* {formData.quant} */}
         </ValueFieldset>
-        <fieldset>
-          <label htmlFor="">Tipo do Valor</label>
+        <SelectFieldset>
+          <small>Tipo do Valor</small>
           <select
             value={formData.category}
             onChange={(event) => setFormData({ ...formData, category: event.target.value })}
@@ -55,9 +62,11 @@ export const NuForm = ({ addToList }) => {
             <option value="entrada">Entrada</option>
             <option value="despesa">Despesa</option>
           </select>
-        </fieldset>
+        </SelectFieldset>
       </DivStyledFormContainer>
-      <button type="submit">Inserir valor</button>
+      <DivButtonSubmit>
+        <button type="submit">Inserir valor</button>
+      </DivButtonSubmit>
     </FormStyled>
   )
 }

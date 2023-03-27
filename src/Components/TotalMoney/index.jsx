@@ -1,4 +1,5 @@
 import React from "react"
+import { TotalMoneyContainerStyled, TotalMoneyCounter, TotalMoneyTextContainer } from "./style"
 
 export const TotalMoney = ({ NukenzieList }) => {
   const mapTotalMoney = NukenzieList.map((TotalMoney) => {
@@ -10,14 +11,14 @@ export const TotalMoney = ({ NukenzieList }) => {
   )
 
   return (
-    <div>
-      <div>
+    <TotalMoneyContainerStyled>
+      <TotalMoneyTextContainer>
         <h2>Valor total:</h2>
         <p>O valor se refere ao saldo</p>
-      </div>
+      </TotalMoneyTextContainer>
       <div>
-        <p>R${reduceTotalMoney}</p>
+        <TotalMoneyCounter>R${reduceTotalMoney}</TotalMoneyCounter>
       </div>
-    </div>
+    </TotalMoneyContainerStyled>
   )
 }
