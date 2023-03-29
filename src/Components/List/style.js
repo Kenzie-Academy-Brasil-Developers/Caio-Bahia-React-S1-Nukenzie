@@ -23,6 +23,12 @@ export const UlStyledCardContainer = styled.ul`
   @media (min-width: 770px) {
     display: flex;
     width: 100%;
-    flex-direction: row;
   }
+`
+export const H2NoCards = styled.h2`
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 34px;
+  color: #343a40;
 `

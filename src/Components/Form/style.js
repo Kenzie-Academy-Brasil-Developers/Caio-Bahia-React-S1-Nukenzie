@@ -32,6 +32,14 @@ export const DescriptionFieldset = styled.fieldset`
     border: 2px solid #f8f9fa;
     border-radius: 8px;
     margin-bottom: 4px;
+
+    ::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: #868e96;
+      padding-left: 15px;
+    }
   }
   small {
     font-weight: 400;
@@ -50,6 +58,10 @@ export const ValueFieldset = styled.fieldset`
   margin-bottom: 10px;
   label {
     margin-bottom: 9px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #212529;
   }
   input {
     background: #f8f9fa;
@@ -58,12 +70,23 @@ export const ValueFieldset = styled.fieldset`
     border: 2px solid #f8f9fa;
     border-radius: 8px;
     margin-bottom: 4px;
+    ::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: #868e96;
+      padding-left: 15px;
+    }
   }
 `
 export const SelectFieldset = styled.fieldset`
   height: 45%;
   small {
-    margin-bottom: 8px;
+    margin-bottom: 9px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #212529;
   }
   select {
     background: #f8f9fa;
@@ -72,6 +95,16 @@ export const SelectFieldset = styled.fieldset`
     border: 2px solid #f8f9fa;
     border-radius: 8px;
     margin-bottom: 4px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #868e96;
+    padding-left: 15px;
+
+    option {
+      background: #e9ecef;
+    }
   }
 `
 export const DivButtonSubmit = styled.div`

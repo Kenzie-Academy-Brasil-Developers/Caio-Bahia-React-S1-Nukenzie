@@ -1,7 +1,7 @@
 import React from "react"
 import { NukenzieCard } from "./Card"
 import { v4 as uuidv4 } from "uuid"
-import { ListContainerStyledDiv, UlStyledCardContainer } from "./style"
+import { H2NoCards, ListContainerStyledDiv, UlStyledCardContainer } from "./style"
 
 export const Nulist = ({ filteredList, removeFromList }) => {
   return (
@@ -16,7 +16,7 @@ export const Nulist = ({ filteredList, removeFromList }) => {
           </>
         ) : (
           <>
-            <h2>Não há lançamentos ainda!</h2>
+            <H2NoCards>Você ainda não possui nenhum lançamento!</H2NoCards>
           </>
         )}
       </UlStyledCardContainer>

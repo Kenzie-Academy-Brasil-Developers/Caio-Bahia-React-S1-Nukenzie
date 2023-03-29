@@ -5,7 +5,7 @@ import { Nulist } from "../../Components/List"
 import { TotalMoney } from "../../Components/TotalMoney"
 import { v4 as uuidv4 } from "uuid"
 import { FilterButtons } from "../../Components/Filter Buttons"
-import { MainStyled, SectionStyledForm, SectionStyledList } from "./style"
+import { SectionStyledForm, SectionStyledList, MainDivStyled, MainStyled } from "./style"
 
 export const Dashboard = () => {
   const [NukenzieList, setNukenzieList] = useState([])
@@ -32,16 +32,18 @@ export const Dashboard = () => {
       {/* Header */}
       <Header />
       <MainStyled>
-        {/* Form + Total Money */}
-        <SectionStyledForm>
-          <NuForm addToList={addToList} />
-          <TotalMoney NukenzieList={NukenzieList} />
-        </SectionStyledForm>
-        {/* Render List + Filter Buttons */}
-        <SectionStyledList>
-          <FilterButtons setFilter={setFilter} />
-          <Nulist filteredList={filteredList} removeFromList={removeFromList} />
-        </SectionStyledList>
+        <MainDivStyled>
+          {/* Form + Total Money */}
+          <SectionStyledForm>
+            <NuForm addToList={addToList} />
+            <TotalMoney NukenzieList={NukenzieList} />
+          </SectionStyledForm>
+          {/* Render List + Filter Buttons */}
+          <SectionStyledList>
+            <FilterButtons setFilter={setFilter} />
+            <Nulist filteredList={filteredList} removeFromList={removeFromList} />
+          </SectionStyledList>
+        </MainDivStyled>
       </MainStyled>
     </>
   )
